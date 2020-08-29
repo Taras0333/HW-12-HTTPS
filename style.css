@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+
+}
+.container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tittle{
+    color: white;
+}
+#cont-btn{
+    width: 200px;
+    height: 50px;
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+#cont-btn:hover{
+    opacity: 0.7;
+    border-color: chartreuse;
+    color: chartreuse;
+}
+.cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+    margin-bottom: 5px;
+}
+.cont:hover{
+    border: 1px solid crimson;
+    color: crimson;
+}
+.page-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.planet-wrap{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.planet-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+    margin-bottom: 5px;
+}
+.planet-cont:hover{
+    border: 1px solid crimson;
+    color: crimson;
+}
+.tittle2{
+    color: white;
+}
+.next{
+    width: 200px;
+    height: 50px;
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    border: 1px solid white;
+
+}
+.next:hover{
+    opacity: 0.7;
+    border-color: chartreuse;
+    color: chartreuse;
+}
+.all-planets{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.tittle3{
+    color: white;
+}
