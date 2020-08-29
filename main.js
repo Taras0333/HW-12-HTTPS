@@ -12,12 +12,12 @@ function getPerson() {
         let string = 'https';
         for (let i = 0; i < resCopy.length; i++){
             split = resCopy[i].split('');
-            console.log(split);
+            
             for (let i =0; i < split.length; i++){
 
                 if(i === 5){
                     let slice = split.slice(4);
-                    console.log(slice);
+
                     string += slice.join('');
                     slice = '';
 
@@ -28,8 +28,7 @@ function getPerson() {
             string = 'https';
         }
 
-        console.log(split);
-        console.log(https);
+
         const container = document.querySelector('.container');
         const contBtn = document.querySelector('#cont-btn');
         let cont = document.createElement('div');
