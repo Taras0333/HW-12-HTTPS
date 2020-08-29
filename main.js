@@ -2,8 +2,34 @@
 function getPerson() {
     const people = axios.get('https://swapi.dev/api/films/2/');
     people.then((res) => {
+
         return (res.data.characters);
     }).then((res) => {
+
+        let aaa = res;
+        let bbb = '';
+        let ttt = [];
+        let ccc = 'https';
+        for (let i = 0; i < aaa.length; i++){
+            bbb = aaa[i].split('');
+            console.log(bbb);
+            for (let i =0; i < bbb.length; i++){
+
+                if(i === 5){
+                    let ggg = bbb.slice(4);
+                    console.log(ggg);
+                    ccc += ggg.join('');
+                    ggg = '';
+
+                }
+
+            }
+            ttt.push(ccc);
+            ccc = 'https';
+        }
+
+        console.log(bbb);
+        console.log(ttt);
         const container = document.querySelector('.container');
         const contBtn = document.querySelector('#cont-btn');
         let cont = document.createElement('div');
@@ -12,7 +38,7 @@ function getPerson() {
 
         contBtn.addEventListener('click', ()=>{
             for(let i = 0; i < res.length; i++){
-                axios.get(res[i]).then((res)=>{
+                axios.get(ttt[i]).then((res)=>{
 
                 cont = document.createElement('div');
                 cont.className = 'cont';
