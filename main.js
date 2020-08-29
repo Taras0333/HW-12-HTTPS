@@ -6,30 +6,30 @@ function getPerson() {
         return (res.data.characters);
     }).then((res) => {
 
-        let aaa = res;
-        let bbb = '';
-        let ttt = [];
-        let ccc = 'https';
-        for (let i = 0; i < aaa.length; i++){
-            bbb = aaa[i].split('');
-            console.log(bbb);
-            for (let i =0; i < bbb.length; i++){
+        let resCopy = res;
+        let split = '';
+        let https = [];
+        let string = 'https';
+        for (let i = 0; i < resCopy.length; i++){
+            split = resCopy[i].split('');
+            console.log(split);
+            for (let i =0; i < split.length; i++){
 
                 if(i === 5){
-                    let ggg = bbb.slice(4);
-                    console.log(ggg);
-                    ccc += ggg.join('');
-                    ggg = '';
+                    let slice = split.slice(4);
+                    console.log(slice);
+                    string += slice.join('');
+                    slice = '';
 
                 }
 
             }
-            ttt.push(ccc);
-            ccc = 'https';
+            https.push(string);
+            string = 'https';
         }
 
-        console.log(bbb);
-        console.log(ttt);
+        console.log(split);
+        console.log(https);
         const container = document.querySelector('.container');
         const contBtn = document.querySelector('#cont-btn');
         let cont = document.createElement('div');
@@ -38,7 +38,7 @@ function getPerson() {
 
         contBtn.addEventListener('click', ()=>{
             for(let i = 0; i < res.length; i++){
-                axios.get(ttt[i]).then((res)=>{
+                axios.get(https[i]).then((res)=>{
 
                 cont = document.createElement('div');
                 cont.className = 'cont';
