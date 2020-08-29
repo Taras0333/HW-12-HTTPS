@@ -28,7 +28,9 @@ function getPerson() {
         })
     }
         })
-})
+}).catch((err)=>{
+        console.log(err);
+    })
 }
 
 getPerson();
@@ -67,6 +69,8 @@ function getPlanets(){
 
             }
 
+        }).catch((err)=>{
+            console.log(err);
         })
 
     })
@@ -109,6 +113,8 @@ function getAllPlanets(){
 
             }
 
+        }).catch((err)=>{
+            console.log(err);
         })
     }
 }
