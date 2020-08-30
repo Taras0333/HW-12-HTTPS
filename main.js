@@ -74,24 +74,7 @@ function getFilmInfo(){
 
         value = input.value;
         const url = 'https://swapi.dev/api/films/' + value +'/';
-        /*let split = '';
-        let https = [];
-        let string = 'https';
-        split = [i].split('');
-        for (let i =0; i < split.length; i++){
-
-                if(i === 5){
-                    let slice = split.slice(4);
-
-                    string += slice.join('');
-                    slice = '';
-
-                }
-
-            }
-            https.push(string);
-            string = 'https';*/
-        const info = axios(url);
+        const info = axios.get(url);
         console.log(url);
         console.log(info);
         info.then((res)=>{
