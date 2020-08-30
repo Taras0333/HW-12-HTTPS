@@ -29,14 +29,16 @@ function getPerson() {
         }
 
 
-        const container = document.querySelector('.container');
+        const container = document.querySelector('.inner-container');
         const contBtn = document.querySelector('#cont-btn');
         let cont = document.createElement('div');
+        let prev = document.querySelector('.inner-container');
 
 
 
         contBtn.addEventListener('click', ()=>{
             for(let i = 0; i < res.length; i++){
+                prev.innerHTML = '';
                 axios.get(https[i]).then((res)=>{
 
                 cont = document.createElement('div');
@@ -59,12 +61,50 @@ function getPerson() {
 }
 
 getPerson();
+function getFilmInfo(){
+    const input = document.querySelector('.input');
+
+    const submitBtn = document.querySelector('.submit');
+    let value = '';
+    const prev = document.querySelector('.inner-container');
+    submitBtn.addEventListener('click', ()=>{
+
+        prev.innerHTML = '';
+        const container = document.querySelector('.inner-container');
+
+        value = input.value;
+        const url = 'https://swapi.dev/api/films/' + value;
+        const info = axios.get(url);
+        console.log(info);
+        info.then((res)=>{
+            console.log(res.data);
+            return(res.data);
+        }).then((res)=>{
+            console.log(res);
+
+            let cont = document.createElement('div');
+            cont.className = 'film-episode-cont';
+            cont.innerHTML = `
+             <h3>${res.title}</h3>
+             <h4>${res.release_date}</h4>
+             <h4>${res.producer}</h4>`
+            container.append(cont);
+            input.value = '';
+        })
+
+    })
+
+
+}
+getFilmInfo();
 function getPlanets(){
 
     const next = document.querySelector('.next');
     let page = 1;
 
     next.addEventListener('click', ()=>{
+        
+
         const planetWrap = document.querySelector('.planet-wrap');
         let planetsCont = document.createElement('div');
 
