@@ -5,7 +5,7 @@ function getPerson() {
 
         return (res.data.characters);
     }).then((res) => {
-        console.log(res);
+
         let resCopy = res;
         let split = '';
         let https = [];
@@ -75,13 +75,11 @@ function getFilmInfo(){
         value = input.value;
         const url = 'https://swapi.dev/api/films/' + value +'/';
         const info = axios.get(url);
-        console.log(url);
-        console.log(info);
+
         info.then((res)=>{
-            console.log(res.data);
             return(res.data);
         }).then((res)=>{
-            console.log(res);
+            
 
             let cont = document.createElement('div');
             cont.className = 'film-episode-cont';
