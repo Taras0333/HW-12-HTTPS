@@ -91,7 +91,7 @@ function getFilmInfo(){
             }
             https.push(string);
             string = 'https';*/
-        const info = axios.get('https://swapi.dev/api/films/2/');
+        const info = axios(url);
         console.log(url);
         console.log(info);
         info.then((res)=>{
