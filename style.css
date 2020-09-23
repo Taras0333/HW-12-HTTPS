@@ -118,10 +118,11 @@ body {
 }
 .input {
   border-radius: 7px;
-  border: none;
+  border: 1px solid white;
   height: 20px;
   background-color: black;
   color: white;
+  outline: none;
 }
 .submit {
   width: 80px;
